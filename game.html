@@ -1,8 +1,8 @@
 <script language="JavaScript">
 
 
-right = 0;
-wrong = 0;
+	right = 0;
+	wrong = 0;
 
 
 // difficulty function
@@ -14,10 +14,10 @@ function difficulty() {
 	else {
 		if (document.mathQuiz.diff[1].checked)
 			value = 30;
-				else {
-					value = 60;
-				}
+		else {
+			value = 60;
 		}
+	}
 	return value;
 }
 
@@ -107,7 +107,7 @@ function division() {
 	result = Math.round(result);
 	
 	answer = window.prompt("HINT: Round up or down!\n"
-	+number1 + "/"  + number2 +  " = ");
+		+number1 + "/"  + number2 +  " = ");
 
 	answerChecker(answer, result);
 }
@@ -155,83 +155,83 @@ function answerChecker(answer, result) {
 
 <form name = mathQuiz>
 
-<body background = "background.gif">
+	<body background = "background.gif">
 
 
-<center>
+		<center>
 
-<table align = "center" bgcolor = "#888888" border = "3" cellpadding = "5">
+			<table align = "center" bgcolor = "#888888" border = "3" cellpadding = "5">
 
-<tr>
+				<tr>
 
-<td bgcolor = "#004080">
- 
-<FONT COLOR = "#ffffff" face = "arial">  <center>  <B>MATH OPERATIONS</B> </center> </FONT>
+					<td bgcolor = "#004080">
+						
+						<FONT COLOR = "#ffffff" face = "arial">  <center>  <B>MATH OPERATIONS</B> </center> </FONT>
 
-</tr>
-
-
-<tr>
-
-<td>
-
-<FONT COLOR = "#ffffff" face = "Arial"> <center>Pick difficulty first</center>  </FONT>
-	
-
-<center>
-
-<br>
-
-<input type = "radio" name = "diff">Easy
-<input type = "radio" name = "diff" checked>Average
-<input type = "radio" name = "diff">Hard
-
-<br>
-
-<br>
-
-</center>
+					</tr>
 
 
-<FONT COLOR="#ffffff" FACE="Arial"><center>Now pick an operation!</center></FONT><BR>
+					<tr>
 
-<center>
+						<td>
 
-<INPUT TYPE = "button" VALUE = "Add" onClick = "addition()">
-<INPUT TYPE = "button" VALUE = "Subtract" onClick = "subtraction()">
-<INPUT TYPE = "button" VALUE = "Multiply" onClick = "multiplication()">
-<INPUT TYPE = "button" VALUE = "Divide" onClick = "division()">
+							<FONT COLOR = "#ffffff" face = "Arial"> <center>Pick difficulty first</center>  </FONT>
+							
 
-</center>
+							<center>
+
+								<br>
+
+								<input type = "radio" name = "diff">Easy
+								<input type = "radio" name = "diff" checked>Average
+								<input type = "radio" name = "diff">Hard
+
+								<br>
+
+								<br>
+
+							</center>
 
 
-<br>
+							<FONT COLOR="#ffffff" FACE="Arial"><center>Now pick an operation!</center></FONT><BR>
 
-<center>
+							<center>
 
-<FONT size=2 FACE="Arial">Right</FONT>
-<INPUT TYPE="txt" NAME="right" VALUE= 0 Size="2">
+								<INPUT TYPE = "button" VALUE = "Add" onClick = "addition()">
+									<INPUT TYPE = "button" VALUE = "Subtract" onClick = "subtraction()">
+										<INPUT TYPE = "button" VALUE = "Multiply" onClick = "multiplication()">
+											<INPUT TYPE = "button" VALUE = "Divide" onClick = "division()">
 
-<FONT size=2 FACE="Arial">Wrong</FONT>
-<INPUT TYPE="txt" NAME="wrong" VALUE= 0 Size="2">
+											</center>
 
 
-</center>
-<br>
-<center>
+											<br>
 
-<input type="button" value="Reset Score" onClick=clearScore()>
+											<center>
 
-</center>
+												<FONT size=2 FACE="Arial">Right</FONT>
+												<INPUT TYPE="txt" NAME="right" VALUE= 0 Size="2">
 
-</br>
+													<FONT size=2 FACE="Arial">Wrong</FONT>
+													<INPUT TYPE="txt" NAME="wrong" VALUE= 0 Size="2">
 
-</TD>
 
-</TR>
+													</center>
+													<br>
+													<center>
 
-</TABLE>
+														<input type="button" value="Reset Score" onClick=clearScore()>
 
-</CENTER>
+													</center>
 
-</form>
+												</br>
+
+											</TD>
+
+										</TR>
+
+									</TABLE>
+
+								</CENTER>
+
+							</form>
