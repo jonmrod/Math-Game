@@ -3,6 +3,7 @@
 
 	right = 0;
 	wrong = 0;
+	minNumber = 0;
 
 
 // difficulty function
@@ -10,13 +11,17 @@
 function difficulty() {
 
 	if (document.mathQuiz.diff[0].checked)
+	{
 		value = 10;
+	}
+	if (document.mathQuiz.diff[1].checked)
+	{
+		value = 30;
+		minNumber = 10;
+	}
 	else {
-		if (document.mathQuiz.diff[1].checked)
-			value = 30;
-		else {
-			value = 60;
-		}
+		value = 60;
+		minNumber= 30;
 	}
 	return value;
 }
@@ -46,7 +51,7 @@ function resetValues() {
 function ranNumber() {
 
 	// used difficulty function to determine how big the random number will be
-	return Math.floor(Math.random() * difficulty()) + 1
+	return Math.floor(Math.random() * difficulty()) + minNumber
 }
 
 
